@@ -94,7 +94,7 @@ export default function HomePage() {
 
   return (
     <div className="dashboard">
-      <h1>Electric Surge: An Interactive Visualization of EV Distribution, Types & Performance</h1>
+      <h1>Electric Surge: An Interactive Visualization of EV Distribution, Types and Performance</h1>
       
       <div className="controls">
         <select 
