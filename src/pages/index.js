@@ -41,7 +41,7 @@ export default function HomePage() {
   const [countyBrands, setCountyBrands] = useState({});
   const [selectedBrand, setSelectedBrand] = useState(null);
   const [selectedCounty, setSelectedCounty] = useState(null);
-  const [vehicleTypeFilter, setVehicleTypeFilter] = useState('All');
+  // const [vehicleTypeFilter, setVehicleTypeFilter] = useState('All');
   const [rangeFilter, setRangeFilter] = useState([0, 200]); // Start with 200 miles range
   const [msrpFilter, setMsrpFilter] = useState([0, 50000]); // Start with $50,000 MSRP
   const [loading, setLoading] = useState(true);
@@ -96,7 +96,7 @@ export default function HomePage() {
     <div className="dashboard">
       <h1>Electric Surge: An Interactive Visualization of EV Distribution, Types and Performance</h1>
       
-      <div className="controls">
+      {/* <div className="controls">
         <select 
           value={vehicleTypeFilter} 
           onChange={(e) => setVehicleTypeFilter(e.target.value)}
@@ -106,7 +106,7 @@ export default function HomePage() {
           <option value="BEV">Battery Electric Vehicle (BEV)</option>
           <option value="PHEV">Plug-in Hybrid Electric Vehicle (PHEV)</option>
         </select>
-      </div>
+      </div> */}
       
       <div className="main-content">
         <div className="left-panel">
@@ -115,7 +115,7 @@ export default function HomePage() {
           <GeoMap 
             data={geomapData} 
             selectedBrand={selectedBrand}
-            vehicleTypeFilter={vehicleTypeFilter}
+            // vehicleTypeFilter={vehicleTypeFilter}
             onCountyClick={handleCountyClick}
           />
         </div>
@@ -162,7 +162,7 @@ export default function HomePage() {
               selectedCounty={selectedCounty}
               rangeFilter={rangeFilter}
               msrpFilter={msrpFilter}
-              vehicleTypeFilter={vehicleTypeFilter}
+              // vehicleTypeFilter={vehicleTypeFilter}
             />
             <div className="scatter-legend">
               <p>• Each dot = a unique model.</p>
