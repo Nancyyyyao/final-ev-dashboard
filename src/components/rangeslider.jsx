@@ -16,6 +16,10 @@ export default function RangeSlider({ min, max, value, onChange, label }) {
     onChange(localValue);
   };
 
+  const formatValue = (val) => {
+    return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <div className="range-slider-container">
       <input
@@ -29,7 +33,7 @@ export default function RangeSlider({ min, max, value, onChange, label }) {
         className="range-slider"
       />
       <div className="range-value">
-        {label ? `${label}: ` : ''}{localValue}
+        {label ? `${label}: ` : ''}{formatValue(localValue)}
       </div>
       
       <style jsx>{`

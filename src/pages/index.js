@@ -141,9 +141,9 @@ export default function HomePage() {
                 <RangeSlider 
                   min={0} 
                   max={400} 
-                  value={rangeFilter[1]} // Use the upper bound of the range
-                  onChange={(value) => setRangeFilter([0, value])} 
-                  label="Electric Range (miles)"
+                  value={rangeFilter[0]} // Use the lower bound of the range
+                  onChange={(value) => setRangeFilter([value,400])} 
+                  label="Min Electric Range (miles)"
                 />
               </div>
               <div>
@@ -153,7 +153,7 @@ export default function HomePage() {
                   max={100000} 
                   value={msrpFilter[1]} // Use the upper bound of the range
                   onChange={(value) => setMsrpFilter([0, value])} 
-                  label="Base MSRP ($)"
+                  label="Max Base MSRP ($)"
                 />
               </div>
             </div>

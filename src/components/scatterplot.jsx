@@ -142,14 +142,14 @@ export default function ScatterPlot({ data, selectedCounty, rangeFilter, msrpFil
   useEffect(() => {
     if (!chartRef.current) return;
     
-    if (!data || data.length === 0) {
-      createChart([
-        { x: 30000, y: 150, model: "Sample EV 1", brand: "TESLA", type: "BEV" },
-        { x: 40000, y: 200, model: "Sample EV 2", brand: "NISSAN", type: "BEV" },
-        { x: 20000, y: 100, model: "Sample EV 3", brand: "CHEVROLET", type: "PHEV" }
-      ]);
-      return;
-    }
+    // if (!data || data.length === 0) {
+    //   createChart([
+    //     { x: 30000, y: 150, model: "Sample EV 1", brand: "TESLA", type: "BEV" },
+    //     { x: 40000, y: 200, model: "Sample EV 2", brand: "NISSAN", type: "BEV" },
+    //     { x: 20000, y: 100, model: "Sample EV 3", brand: "CHEVROLET", type: "PHEV" }
+    //   ]);
+    //   return;
+    // }
 
     const rangeMin = Array.isArray(rangeFilter) ? rangeFilter[0] : 0;
     const rangeMax = Array.isArray(rangeFilter) ? rangeFilter[1] : rangeFilter || 400;
@@ -231,7 +231,8 @@ export default function ScatterPlot({ data, selectedCounty, rangeFilter, msrpFil
             },
             ticks: {
               callback: value => `$${value.toLocaleString()}`
-            }
+            },
+            beginAtZero: true
           },
           y: {
             title: {
