@@ -218,7 +218,7 @@ export default function ScatterPlot({ data, selectedCounty, rangeFilter, msrpFil
             callbacks: {
               label: function(context) {
                 const point = context.raw;
-                console.log("context:", context.raw);
+                // console.log("context:", context.raw);
                 return [
                   // `Brand: ${point.brand}`,
                   `Model: ${point.model}`,
