@@ -167,6 +167,12 @@ export default function ScatterPlot({ data, selectedCounty, rangeFilter, msrpFil
         msrp >= msrpMin && 
         msrp <= msrpMax
       );
+    })
+    .filter((item, index, self) => {
+      const key = `${item.Model}|${item.Make}|${item.Base_MSRP}|${item.Electric_Range}`;
+      return index === self.findIndex(t => (
+        `${t.Model}|${t.Make}|${t.Base_MSRP}|${t.Electric_Range}` === key
+      ));
     });
 
     const scatterData = filteredData.map(item => ({
@@ -176,7 +182,7 @@ export default function ScatterPlot({ data, selectedCounty, rangeFilter, msrpFil
       brand: item.Make || 'Unknown Brand',
       type: item.Electric_Vehicle_Type || 'Unknown Type'
     }));
-
+    console.log("scatterData:", scatterData);
     createChart(scatterData);
     
   }, [data, selectedCounty, rangeFilter, msrpFilter]);
@@ -212,12 +218,13 @@ export default function ScatterPlot({ data, selectedCounty, rangeFilter, msrpFil
             callbacks: {
               label: function(context) {
                 const point = context.raw;
+                console.log("context:", context.raw);
                 return [
+                  // `Brand: ${point.brand}`,
                   `Model: ${point.model}`,
-                  `Brand: ${point.brand}`,
-                  `Type: ${point.type}`,
-                  `Range: ${point.y} miles`,
-                  `MSRP: $${point.x.toLocaleString()}`
+                  // `Type: ${point.type}`,
+                  // `Range: ${point.y} miles`,
+                  // `MSRP: $${point.x.toLocaleString()}`
                 ];
               }
             }
