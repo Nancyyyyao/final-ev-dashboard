@@ -122,8 +122,8 @@ export default function HomePage() {
         
         <div className="right-panel">
           <div className="bar-chart-container">
-            <h2>Bar chart</h2>
-            <p>Top 5 EV brands by total registrations</p>
+            <h2>Top 5 EV brands</h2>
+            {/* <p>Top 5 EV brands by total registrations</p> */}
             <p>(Clickable bars update the GeoMap to show only that brand's distribution)</p>
             <BarChart 
               topBrands={topBrands}
@@ -134,7 +134,7 @@ export default function HomePage() {
           </div>
           
           <div className="scatter-plot-container">
-            <h2>Scatter Plot</h2>
+            <h2>Best EVs for Your Budget and Range Needs</h2>
             <div className="filters">
               <div>
                 <p>Electric range</p>
