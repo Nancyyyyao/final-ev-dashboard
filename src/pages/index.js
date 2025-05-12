@@ -165,7 +165,7 @@ export default function HomePage() {
               // vehicleTypeFilter={vehicleTypeFilter}
             />
             <div className="scatter-legend">
-              <p>• Each dot = a unique model.</p>
+              {/* <p>• Each dot = a unique model.</p> */}
               <p>• Tooltips show model names.</p>
               <p>• MSRP: Manufacturer's Suggested Retail Price.</p>
             </div>
