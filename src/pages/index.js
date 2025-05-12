@@ -110,7 +110,7 @@ export default function HomePage() {
       
       <div className="main-content">
         <div className="left-panel">
-          <h2>US EV Distribution by County</h2>
+          <h2>EV Distribution across U.S. Counties</h2>
           <p>(color saturation: number of EV)</p>
           <GeoMap 
             data={geomapData} 
