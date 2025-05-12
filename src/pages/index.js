@@ -166,7 +166,7 @@ export default function HomePage() {
             />
             <div className="scatter-legend">
               <p>• Each dot = a unique model.</p>
-              <p>• Tooltips show model name, brand, and type.</p>
+              <p>• Tooltips show model names.</p>
             </div>
           </div>
         </div>
