@@ -122,7 +122,7 @@ export default function HomePage() {
         
         <div className="right-panel">
           <div className="bar-chart-container">
-            <h2>Top 5 EV brands</h2>
+            <h2>Top 5 EV Brands</h2>
             {/* <p>Top 5 EV brands by total registrations</p> */}
             <p>(Clickable bars update the GeoMap to show only that brand's distribution)</p>
             <BarChart 
