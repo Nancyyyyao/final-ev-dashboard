@@ -94,7 +94,7 @@ export default function HomePage() {
 
   return (
     <div className="dashboard">
-      <h1>Electric Surge: An Interactive Visualization of EV Distribution, Types and Performance</h1>
+      <h1>Electric Vehice Market: An Interactive Visualization of EV Distribution, Types and Performance</h1>
       
       {/* <div className="controls">
         <select 
@@ -167,6 +167,7 @@ export default function HomePage() {
             <div className="scatter-legend">
               <p>• Each dot = a unique model.</p>
               <p>• Tooltips show model names.</p>
+              <p>• MSRP: Manufacturer's Suggested Retail Price.</p>
             </div>
           </div>
         </div>
